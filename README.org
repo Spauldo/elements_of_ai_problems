@@ -1,0 +1,67 @@
+* Problems from the book /Elements of Artificial Intelligence/ by Steven L. Tanimoto
+
+  This is a collection of problems from the book /Elements of Artificial Intelligence/ by Steven L. Tanimoto.  It's a rather old AI textbook by modern standards, copyrighted in 1987.  The version of LISP used in the book uses archaic forms that are unavailable in most modern LISPs.
+  
+  So why am I bothering to work through the problems in a thirty-year out of date textbook?  Because I can!  It's an interesting read, and I figure why not give it a shot.  It's certainly more interesting than reading another "do blah blah blah in JAVA" book (especially when Java happens to be a poor choice for "blah blah blah").  Besides, I can't stand Java.
+
+  Anyway, this isn't for a class, it's just for my own fun.
+  
+  I'm only doing the programming assignments here.  Since I don't have access to a MacLISP or InterLISP machine (does anyone these days?) I'll be doing all this in Common LISP.  I get plenty of practice with Scheme and Emacs Lisp, but I've always wanted to do more with Common LISP and this looks like a good excuse.
+
+** Problems
+   
+*** Chapter 2
+
+    6. Write a recursive function EXIFY which takes any S-expression and converts it to a new one in which all atoms other than NIL have been replaced by X.  Thus:
+
+       #+BEGIN_SRC lisp
+
+(EXIFY '(A (B . C) X Y NIL Z))
+       
+       #+END_SRC
+       
+       should produce:
+
+       #+BEGIN_SRC lisp
+
+(X (X . X) X X NIL X)
+       
+       #+END_SRC
+       
+   7. Write a recursive function REPLACE which takes three S-expressions (call them S1, S2, and S3).  It replaces S2 by S3 whenever it occurs in S1.  Use EQUAL to test for occurrences of S2 in S1.  For example:
+
+      #+BEGIN_SRC lisp
+
+(REPLACE '((THIS 1) CONTAINS (2 OCCURRENCES (THIS 1)))
+         '(THIS 1)
+         '(THAT ONE))
+      
+      #+END_SRC
+      
+      should yield the value:
+
+      #+BEGIN_SRC lisp
+
+((THAT ONE) CONTAINS (2 OCCURRENCES (THAT ONE)))
+      
+      #+END_SRC
+
+** License
+
+   Although the assignments are certainly not my creation, the answer are.  I'm licensing everything under the ISC license.  It's more-or-less equivalent to the MIT or BSD licenses, and is the license used by OpenBSD.
+
+   All code is copyright (C) 2018 by Jeff Spaulding <sarnet@gmail.com>.
+
+   This is the ISC License.
+
+   Permission to use, copy, modify, and distribute this software for any
+   purpose with or without fee is hereby granted, provided that the above
+   copyright notice and this permission notice appear in all copies.
+
+   THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+   WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+   MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+   ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+   WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+   ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+   OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
