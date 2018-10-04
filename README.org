@@ -10,42 +10,6 @@
 
 ** Problems
    
-*** Chapter 2
-
-    @6. Write a recursive function EXIFY which takes any S-expression and converts it to a new one in which all atoms other than NIL have been replaced by X.  Thus:
-
-       #+BEGIN_SRC lisp
-
-(EXIFY '(A (B . C) X Y NIL Z))
-       
-       #+END_SRC
-       
-       should produce:
-
-       #+BEGIN_SRC lisp
-
-(X (X . X) X X NIL X)
-       
-       #+END_SRC
-       
-    @7. Write a recursive function REPLACE which takes three S-expressions (call them S1, S2, and S3).  It replaces S2 by S3 whenever it occurs in S1.  Use EQUAL to test for occurrences of S2 in S1.  For example:
-
-      #+BEGIN_SRC lisp
-
-(REPLACE '((THIS 1) CONTAINS (2 OCCURRENCES (THIS 1)))
-         '(THIS 1)
-         '(THAT ONE))
-      
-      #+END_SRC
-      
-      should yield the value:
-
-      #+BEGIN_SRC lisp
-
-((THAT ONE) CONTAINS (2 OCCURRENCES (THAT ONE)))
-      
-      #+END_SRC
-
 ** License
 
    Since I'm doing exercises from a book, some parts of the code here are derivative works of the book's code.  I can't claim ownership of any of this code; it belongs to the author of the book.  Code that comes from the book or is a derivative of code from the book will be marked as such.
