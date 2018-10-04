@@ -12,7 +12,7 @@
    
 *** Chapter 2
 
-    6. Write a recursive function EXIFY which takes any S-expression and converts it to a new one in which all atoms other than NIL have been replaced by X.  Thus:
+    @6. Write a recursive function EXIFY which takes any S-expression and converts it to a new one in which all atoms other than NIL have been replaced by X.  Thus:
 
        #+BEGIN_SRC lisp
 
@@ -28,7 +28,7 @@
        
        #+END_SRC
        
-   7. Write a recursive function REPLACE which takes three S-expressions (call them S1, S2, and S3).  It replaces S2 by S3 whenever it occurs in S1.  Use EQUAL to test for occurrences of S2 in S1.  For example:
+    @7. Write a recursive function REPLACE which takes three S-expressions (call them S1, S2, and S3).  It replaces S2 by S3 whenever it occurs in S1.  Use EQUAL to test for occurrences of S2 in S1.  For example:
 
       #+BEGIN_SRC lisp
 
@@ -48,9 +48,11 @@
 
 ** License
 
-   Although the assignments are certainly not my creation, the answer are.  I'm licensing everything under the ISC license.  It's more-or-less equivalent to the MIT or BSD licenses, and is the license used by OpenBSD.
+   Since I'm doing exercises from a book, some parts of the code here are derivative works of the book's code.  I can't claim ownership of any of this code; it belongs to the author of the book.  Code that comes from the book or is a derivative of code from the book will be marked as such.
 
-   All code is copyright (C) 2018 by Jeff Spaulding <sarnet@gmail.com>.
+   The rest of the code is my work.  I'm licensing my code under the ISC license.  It's more-or-less equivalent to the MIT or BSD licenses, and is the license used by OpenBSD.
+
+   Copyright (C) 2018 by Jeff Spaulding <sarnet@gmail.com>.
 
    This is the ISC License.
 
@@ -65,3 +67,4 @@
    WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
    ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
    OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
