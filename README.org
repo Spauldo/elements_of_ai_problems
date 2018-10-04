@@ -10,6 +10,10 @@
 
 ** Problems
    
+   Each chapter has a list of problems and links to solutions.
+
+   [[chap_02/README.org][Chapter 2]]
+   
 ** License
 
    Since I'm doing exercises from a book, some parts of the code here are derivative works of the book's code.  I can't claim ownership of any of this code; it belongs to the author of the book.  Code that comes from the book or is a derivative of code from the book will be marked as such.

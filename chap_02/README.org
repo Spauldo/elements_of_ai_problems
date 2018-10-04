@@ -1,6 +1,6 @@
 * Chapter 2
 
-** Question 6.
+** Question 6
 
    Write a recursive function EXIFY which takes any S-expression and converts it to a new one in which all atoms other than NIL have been replaced by X.  Thus:
 
@@ -20,7 +20,7 @@
        
    [[exify.lisp][Solution]]
 
-** Question 7.
+** Question 7
 
    Write a recursive function REPLACE which takes three S-expressions (call them S1, S2, and S3).  It replaces S2 by S3 whenever it occurs in S1.  Use EQUAL to test for occurrences of S2 in S1.  For example:
 
