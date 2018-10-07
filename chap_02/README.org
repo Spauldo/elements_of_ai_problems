@@ -7,7 +7,7 @@
    #+BEGIN_SRC lisp
 
 (EXIFY '(A (B . C) X Y NIL Z))
-       
+      
    #+END_SRC
        
    should produce:
@@ -42,3 +42,8 @@
 
    [[replace.lisp][Solution]]
 
+** Question 8
+
+   Using a recursive approach, write a function which prints the first fifteen cubes (1, 8, 27, 64, ..., 3375).  Now write a non-recursive version using PROG.  Compare the lengths of the two definitions by counting the number of atom occurrences in each.
+
+   [[cubes.lisp][Solution]]

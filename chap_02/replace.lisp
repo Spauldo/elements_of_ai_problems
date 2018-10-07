@@ -1,6 +1,12 @@
-;;; -*- mode: lisp; coding: utf-8; -*-
-;;;
 ;;; replace.lisp
+;;;
+;;; Lesson learned:
+;;; Common Lisp apparently doesn't allow you to define a symbol with the
+;;; same name as a symbol in package COMMON-LISP (even if you're defining
+;;; it in a different package).
+;;;
+;;; Contrast that with Scheme, where you can redefine everything to your
+;;; heart's content.
 ;;;
 ;;; Copyright (C) 2018 Jeff Spaulding <sarnet@gmail.com>
 ;;;
@@ -22,5 +28,30 @@
   (:use :common-lisp)
   (:export :test))
 
+(defun replace-elt (s1 s2 s3)
+  "Replace all occurrences of S2 with S3 in S1."
+  (mapcar (lambda (elt)
+	    (cond ((equal elt s2)
+		   s3)
+		  ((listp elt)
+		   (replace-elt elt s2 s3))
+		  (t elt)))
+	  s1))
+
 (defun test ()
-  T)
+  (and (equal (replace-elt '(a b c d e f g)
+			   'a
+			   'alpha)
+	      '(alpha b c d e f g))
+       (equal (replace-elt '(1 2 3 4 5 (1 2 3 4 5))
+			   '2
+			   '6)
+	      '(1 6 3 4 5 (1 6 3 4 5)))
+       (equal (replace-elt '((this 1) contains (2 occurrences (this 1)))
+			   '(this 1)
+			   '(that one))
+	      '((that one) contains (2 occurrences (that one))))
+       (equal (replace-elt '((1 2 (this 1) 3) (this 1) (((3 (this 1)) 4)))
+			   '(this 1)
+			   '(that one))
+	      '((1 2 (that one) 3) (that one) (((3 (that one)) 4))))))

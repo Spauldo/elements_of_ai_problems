@@ -1,8 +1,10 @@
-;;; -*- mode: lisp; coding: utf-8; -*-
-;;;
 ;;; exify.lisp
 ;;;
-;;; Corresponds to Chapter 2, Problem 6 in the textbook.
+;;; Lesson learned:
+;;; MAPCAR (and many of the sequence functions) doesn't handle improper
+;;; lists.
+;;;
+;;; That makes sense, really, but I had never tried it before.
 ;;;
 ;;; Copyright (C) 2018 Jeff Spaulding <sarnet@gmail.com>
 ;;;
