@@ -68,3 +68,23 @@
 
    [[palindrome.lisp][Solution]]
    
+** Question 14
+
+   Use MAPCAR to write a function that takes a list and creates a new list whose elements are lists obtained by repeating original elements.  For example, if the old list was
+
+   #+BEGIN_SRC common-lisp
+
+(X Y (Z W))
+
+   #+END_SRC
+   
+   then the new list would be
+   
+   #+BEGIN_SRC common-lisp
+
+((X X) (Y Y) ((Z W) (Z W)))
+
+   #+END_SRC
+   
+   [[double-elements.lisp][Solution]]
+
