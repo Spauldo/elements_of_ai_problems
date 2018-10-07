@@ -47,3 +47,17 @@
    Using a recursive approach, write a function which prints the first fifteen cubes (1, 8, 27, 64, ..., 3375).  Now write a non-recursive version using PROG.  Compare the lengths of the two definitions by counting the number of atom occurrences in each.
 
    [[cubes.lisp][Solution]]
+
+** Question 10
+
+   Suppose an atom ILIST is bound to a list of integers such as (3 7 11 13) and a function is needed which returns the sum of all the elements of ILIST; that is, a function SUM is desired such that in our case
+
+   #+BEGIN_SRC common-lisp
+
+(SUM ILIST)
+
+   #+END_SRC
+   
+   returns 34.  Use APPLY to define such a summation function.
+   
+   [[summation.lisp][Solution]]
