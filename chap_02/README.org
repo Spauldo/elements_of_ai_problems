@@ -61,3 +61,10 @@
    returns 34.  Use APPLY to define such a summation function.
    
    [[summation.lisp][Solution]]
+
+** Question 12
+
+   Define a LISP function (PALINDROMEP LST) which returns T if and only if LST is a palindrome; that is, if LST is the same after its top level elements have been put into reverse order.
+
+   [[palindrome.lisp][Solution]]
+   
