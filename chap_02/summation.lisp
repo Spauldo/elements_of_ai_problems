@@ -20,7 +20,8 @@
 ;;; OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 (defpackage :net.spauldo.ai-text.summation
-  (:use :common-lisp))
+  (:use :common-lisp)
+  (:export :test))
 
 (defun sum (item)
   "Sum all elements in the list ITEM.

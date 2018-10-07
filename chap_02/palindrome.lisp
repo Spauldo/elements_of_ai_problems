@@ -20,7 +20,7 @@
 
 (defpackage :net.spauldo.ai-text.palindrome
   (:use :common-lisp)
-  (:export test))
+  (:export :test))
 
 (defun palindromep (lst)
   "Return T if LST is the same with all top-level elements reversed.
