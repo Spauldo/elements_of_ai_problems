@@ -1,20 +1,28 @@
 * Problems from the book /Elements of Artificial Intelligence/ by Steven L. Tanimoto
 
-  This is a collection of problems from the book /Elements of Artificial Intelligence/ by Steven L. Tanimoto.  It's a rather old AI textbook by modern standards, copyrighted in 1987.  The version of LISP used in the book uses archaic forms that are unavailable in most modern LISPs.
+  This is a collection of problems from the book /Elements of Artificial Intelligence/ by Steven L. Tanimoto.  It's a rather old AI textbook by modern standards, copyrighted in 1987.  The version of LISP used in the book uses archaic forms that are unavailable in most modern LISPs (it's even got FEXPRs!).
   
   So why am I bothering to work through the problems in a thirty-year out of date textbook?  Because I can!  It's an interesting read, and I figure why not give it a shot.  It's certainly more interesting than reading another "do blah blah blah in JAVA" book (especially when Java happens to be a poor choice for "blah blah blah").  Besides, I can't stand Java.
 
   Anyway, this isn't for a class, it's just for my own fun.
   
-  I'm only doing the programming assignments here.  Since I don't have access to a MacLISP or InterLISP machine (does anyone these days?) I'll be doing all this in Common LISP.  I get plenty of practice with Scheme and Emacs Lisp, but I've always wanted to do more with Common LISP and this looks like a good excuse.
+  I'm only doing the programming assignments here, not the non-programming questions.  That's why there's a lot of missing numbers.  The way I figure it, the only people interested in the answers to non-programming questions are people actually taking a class that uses this as the textbook.  Since that's extremely unlikely (and I don't care to be their hypothetical cheat-sheet), I'm skipping those in here.  I do read them and try to solve them on my own, however.
+
+  Since I don't have access to a MacLISP or InterLISP machine (does anyone these days?) I'll be doing all this in Common Lisp.  I get plenty of practice with Scheme and Emacs Lisp, but I've always wanted to do more with Common Lisp and this looks like a good excuse.
+
+  Note that in exercises where the problem could easily be solved by a single call to a Common Lisp function that wasn't in the LISP variant used by the book, I implement the solution the hard way.  It's more fun that way.  In all other cases, I will take advantage of what Common Lisp has to offer - I'm trying to learn Common Lisp, after all.  Feel free to drop me a line if you see a place where I could improve the code.  I'm always interested in learning.
 
 ** Problems
    
-   Each chapter has a list of problems and links to solutions.
+   Each chapter has a list of problems and links to solutions.  Remember, skipped questions are non-programming questions!  It's not just me being lazy.
+   
+   I'll also put some of my thoughts about each chapter.  I'm not going to bother with chapter 1, since it's just an introduction.  My only real comment on it would be how it shows the hope people had for artificial intelligence before the AI winter of the 90s.
 
    [[chap_02/README.org][Chapter 2]]
    
 ** License
+
+   The various README files contain the text of the questions from the book.  I do not own those questions.  Everything else in the README files (except the license text below) is all mine.  If you really want to use the parts of the README files that I wrote (WHY?), then go ahead; it's licensed Creative Commons CC0.
 
    Since I'm doing exercises from a book, some parts of the code here are derivative works of the book's code.  I can't claim ownership of any of this code; it belongs to the author of the book.  Code that comes from the book or is a derivative of code from the book will be marked as such.
 
@@ -35,4 +43,4 @@
    WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
    ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
    OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-
+   
