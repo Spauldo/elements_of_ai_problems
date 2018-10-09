@@ -1,5 +1,26 @@
 * Chapter 2
+  
+  This chapter is basically a LISP tutorial.  It doesn't teach the entire language, but just the parts you would need to know to complete the exercises in the book.
 
+  I find the archaic style fascinating.  I've written most of my LISP code in Scheme with some Emacs Lisp (where I haven't delved into the dustier parts of the codebase).  I've played around with Clojure (basically the LISP version of Haskell) a bit.  The programming style used in the book is very, very different than what you see used these days.
+  
+  Strings aren't mentioned at all.  The author uses symbols for text.  Later on, when the author's programs need to perform I/O to the user, it spits out lists of symbols for its output and reads lists of symbols as its input.  Example:
+  
+  #+BEGIN_SRC common-lisp
+
+'(HOW ARE YOU DOING TODAY)
+'(I AM FINE)
+
+  #+END_SRC
+  
+  There's PROG for instance, which doesn't get a mention in Peter Seibel's /Practical Common Lisp/ (a very good book that is unfortunately lacking an index), although it's part of the standard.  It's like PROGN, LET, and TAGBODY all mixed together so you can write programs in a procedural fashion.  I can see the appeal for FORTRAN or BASIC programmers, but I can also see why Peter left if out of his book.
+  
+  Another neat one is FEXPRs.  They're expressions whose arguments are not evaluated.  Basically, they fit into the same niche as macros (which the book doesn't talk about at all).  It turns out that FEXPRs aren't part of Common Lisp because it's basically impossible for a compiler to predict how they'll be used, so it can't optimize the code.  Since Common Lisp (or any other language I use) doesn't have FEXPRs, I can't use them myself.  If it becomes an issue later on, I can use macros.
+
+  It talks a bit about debugging using TRACE and BREAK.  I tried TRACE for the first time, and it's really cool.  I haven't tried BREAK yet.  What's neat is that he has code for BREAK in case your particular LISP doesn't support it.
+ 
+  The chapter ends with some advice on how to write LISP programs and programming in general.  I love how it advises you that, with the inherent risk of magnetic media, it's best to print out your code every now and again.  That brings back memories.
+ 
 ** Question 6
 
    Write a recursive function EXIFY which takes any S-expression and converts it to a new one in which all atoms other than NIL have been replaced by X.  Thus:
