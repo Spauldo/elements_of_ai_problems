@@ -111,6 +111,6 @@
 
 ** Question 15
 
-   Define a functions (EQUALELTS LST) which returns T if and only if all the top-level elements of LST are EQUAL to each other.
+   Define a function (EQUALELTS LST) which returns T if and only if all the top-level elements of LST are EQUAL to each other.
 
    [[equalelts.lisp][Solution]]
