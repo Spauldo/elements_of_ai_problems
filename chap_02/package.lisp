@@ -28,7 +28,7 @@
 
 (defpackage :net.spauldo.ai-text.equalelts
   (:use :common-lisp)
-  (:export :test))
+  (:export :test :equalelts))
 
 (defpackage :net.spauldo.ai-text.exify
   (:use :common-lisp)
