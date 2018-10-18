@@ -33,9 +33,7 @@
 ;;; ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 ;;; OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-(defpackage :net.spauldo.ai-text.cubes
-  (:use :common-lisp)
-  (:export :test))
+(in-package :net.spauldo.ai-text.cubes)
 
 ;;; Write two functions that return a list of the first fifteen cubes.
 ;;; One function should use recursion, the other should use PROG.

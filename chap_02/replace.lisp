@@ -24,9 +24,7 @@
 ;;; ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 ;;; OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-(defpackage :net.spauldo.ai-text.replace
-  (:use :common-lisp)
-  (:export :test))
+(in-package :net.spauldo.ai-text.replace)
 
 (defun replace-elt (s1 s2 s3)
   "Replace all occurrences of S2 with S3 in S1."

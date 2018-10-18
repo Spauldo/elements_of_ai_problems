@@ -22,9 +22,7 @@
 ;;; ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 ;;; OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-(defpackage :net.spauldo.ai-text.exify
-  (:use :common-lisp)
-  (:export :test))
+(in-package :net.spauldo.ai-text.exify)
 
 ;;; First attempt, doesn't handle improper lists or single atoms
 

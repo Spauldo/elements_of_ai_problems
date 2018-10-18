@@ -1,9 +1,6 @@
-;;; double-elements.lisp --- Double all elements in a list
+;;; package.lisp --- Chapter 2 package definitions
 
 ;;; Copyright (C) 2018 Jeff Spaulding <sarnet@gmail.com>
-;;;
-;;; Lessons learned:
-;;; Another straightforward one.
 ;;;
 ;;; This is the ISC License.
 ;;;
@@ -19,12 +16,32 @@
 ;;; ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 ;;; OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-(in-package :net.spauldo.ai-text.double-elements)
+(in-package :cl-user)
 
-(defun double-elements (lst)
-  (mapcar (lambda (x) (list x x))
-	  lst))
+(defpackage :net.spauldo.ai-text.cubes
+  (:use :common-lisp)
+  (:export :test))
 
-(defun test ()
-  (equal (double-elements '(x y (z w)))
-	 '((x x) (y y) ((z w) (z w)))))
+(defpackage :net.spauldo.ai-text.double-elements
+  (:use :common-lisp)
+  (:export :test))
+
+(defpackage :net.spauldo.ai-text.equalelts
+  (:use :common-lisp)
+  (:export :test))
+
+(defpackage :net.spauldo.ai-text.exify
+  (:use :common-lisp)
+  (:export :test))
+
+(defpackage :net.spauldo.ai-text.palindrome
+  (:use :common-lisp)
+  (:export :test))
+
+(defpackage :net.spauldo.ai-text.replace
+  (:use :common-lisp)
+  (:export :test))
+
+(defpackage :net.spauldo.ai-text.summation
+  (:use :common-lisp)
+  (:export :test))
