@@ -21,27 +21,27 @@
 
 (in-package :net.spauldo.ai-text.chap-02.system)
 
-(defsystem "ai-text.chap-02"
-    :name "Chapter 2"
-    :author "Jeff Spaulding"
-    :license "ISC License"
-    :description "Chapter 2 Programming Problems"
-    :long-description "Problems from Elements of Artificial Intelligence Chap. 2"
-    :depends-on (:ai-text.utility)
-    :components ((:file "cubes"
-			:depends-on ("package"))
-		 (:file "double-elements"
-			:depends-on ("package"))
-		 (:file "equalelts"
-			:depends-on ("package"))
-		 (:file "exify"
-			:depends-on ("package"))
-		 (:file "palindrome"
-			:depends-on ("package"))
-		 (:file "quasi-balancedp"
-			:depends-on ("package" "equalelts"))
-		 (:file "replace"
-			:depends-on ("package"))
-		 (:file "summation"
-			:depends-on ("package"))
-		 (:file "package")))
+(defsystem "chap_02"
+  :name "Chapter 2"
+  :author "Jeff Spaulding"
+  :license "ISC License"
+  :description "Chapter 2 Programming Problems"
+  :long-description "Problems from Elements of Artificial Intelligence Chap. 2"
+  :depends-on ("utility")
+  :components ((:file "cubes"
+		      :depends-on ("package"))
+	       (:file "double-elements"
+		      :depends-on ("package"))
+	       (:file "equalelts"
+		      :depends-on ("package"))
+	       (:file "exify"
+		      :depends-on ("package"))
+	       (:file "palindrome"
+		      :depends-on ("package"))
+	       (:file "quasi-balancedp"
+		      :depends-on ("package" "equalelts"))
+	       (:file "replace"
+		      :depends-on ("package"))
+	       (:file "summation"
+		      :depends-on ("package"))
+	       (:file "package")))

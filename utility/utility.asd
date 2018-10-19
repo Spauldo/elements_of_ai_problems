@@ -21,12 +21,12 @@
 
 (in-package :net.spauldo.ai-text.utility.system)
 
-(defsystem "ai-text.utility"
-    :name "Utility functions"
-    :author "Jeff Spaulding"
-    :license "ISC License"
-    :description "Utility functions for Elements of AI"
-    :long-description "Utility functions for Elements of AI"
-    :components ((:file "utility"
-			:depends-on ("package"))
-		 (:file "package")))
+(defsystem "utility"
+  :name "Utility functions"
+  :author "Jeff Spaulding"
+  :license "ISC License"
+  :description "Utility functions for Elements of AI"
+  :long-description "Utility functions for Elements of AI"
+  :components ((:file "utility"
+		      :depends-on ("package"))
+	       (:file "package")))
