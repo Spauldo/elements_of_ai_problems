@@ -1,6 +1,8 @@
-;;; package.lisp --- Chapter 2 package definitions
-
+;;; quasi-balancedp.lisp --- Determine if a list is "quasi-balanced"
+;;;
 ;;; Copyright (C) 2018 Jeff Spaulding <sarnet@gmail.com>
+;;;
+;;;
 ;;;
 ;;; This is the ISC License.
 ;;;
@@ -16,36 +18,12 @@
 ;;; ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 ;;; OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-(in-package :cl-user)
+(in-package :net.spauldo.ai-text.quasi-balancedp)
 
-(defpackage :net.spauldo.ai-text.cubes
-  (:use :common-lisp)
-  (:export :test))
+(defun quasi-balancedp (lst)
+  (cond )
+  (listp lst))
 
-(defpackage :net.spauldo.ai-text.double-elements
-  (:use :common-lisp)
-  (:export :test))
-
-(defpackage :net.spauldo.ai-text.equalelts
-  (:use :common-lisp)
-  (:export :test :equalelts))
-
-(defpackage :net.spauldo.ai-text.exify
-  (:use :common-lisp)
-  (:export :test))
-
-(defpackage :net.spauldo.ai-text.palindrome
-  (:use :common-lisp)
-  (:export :test))
-
-(defpackage :net.spauldo.ai-text.quasi-balancedp
-  (:use :common-lisp :net.spauldo.ai-text.equalelts)
-  (:export :test))
-
-(defpackage :net.spauldo.ai-text.replace
-  (:use :common-lisp)
-  (:export :test))
-
-(defpackage :net.spauldo.ai-text.summation
-  (:use :common-lisp)
-  (:export :test))
+(defun test ()
+  (and (quasi-balancedp '((A B) (C D) (E F)))
+       (not (quasi-balancedp '((A (B C)) (D E) (F G))))))

@@ -1,4 +1,4 @@
-;;; chap_02.asd --- System definition file for chapter 2
+;;; utility.asd --- System definition file for Elements of AI utilities
 
 ;;; Copyright (C) 2018 Jeff Spaulding <sarnet@gmail.com>
 ;;;
@@ -16,32 +16,17 @@
 ;;; ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 ;;; OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-(defpackage :net.spauldo.ai-text.chap-02.system
+(defpackage :net.spauldo.ai-text.utility.system
   (:use :cl :asdf))
 
-(in-package :net.spauldo.ai-text.chap-02.system)
+(in-package :net.spauldo.ai-text.utility.system)
 
-(defsystem "ai-text.chap-02"
-    :name "Chapter 2"
+(defsystem "ai-text.utility"
+    :name "Utility functions"
     :author "Jeff Spaulding"
     :license "ISC License"
-    :description "Chapter 2 Programming Problems"
-    :long-description "Problems from Elements of Artificial Intelligence Chap. 2"
-    :depends-on (:ai-text.utility)
-    :components ((:file "cubes"
-			:depends-on ("package"))
-		 (:file "double-elements"
-			:depends-on ("package"))
-		 (:file "equalelts"
-			:depends-on ("package"))
-		 (:file "exify"
-			:depends-on ("package"))
-		 (:file "palindrome"
-			:depends-on ("package"))
-		 (:file "quasi-balancedp"
-			:depends-on ("package" "equalelts"))
-		 (:file "replace"
-			:depends-on ("package"))
-		 (:file "summation"
+    :description "Utility functions for Elements of AI"
+    :long-description "Utility functions for Elements of AI"
+    :components ((:file "utility"
 			:depends-on ("package"))
 		 (:file "package")))

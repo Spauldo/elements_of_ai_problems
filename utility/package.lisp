@@ -1,4 +1,4 @@
-;;; package.lisp --- Chapter 2 package definitions
+;;; package.lisp --- Package definitions for Elements of AI utility functions
 
 ;;; Copyright (C) 2018 Jeff Spaulding <sarnet@gmail.com>
 ;;;
@@ -18,34 +18,6 @@
 
 (in-package :cl-user)
 
-(defpackage :net.spauldo.ai-text.cubes
+(defpackage :net.spauldo.ai-text.utility
   (:use :common-lisp)
-  (:export :test))
-
-(defpackage :net.spauldo.ai-text.double-elements
-  (:use :common-lisp)
-  (:export :test))
-
-(defpackage :net.spauldo.ai-text.equalelts
-  (:use :common-lisp)
-  (:export :test :equalelts))
-
-(defpackage :net.spauldo.ai-text.exify
-  (:use :common-lisp)
-  (:export :test))
-
-(defpackage :net.spauldo.ai-text.palindrome
-  (:use :common-lisp)
-  (:export :test))
-
-(defpackage :net.spauldo.ai-text.quasi-balancedp
-  (:use :common-lisp :net.spauldo.ai-text.equalelts)
-  (:export :test))
-
-(defpackage :net.spauldo.ai-text.replace
-  (:use :common-lisp)
-  (:export :test))
-
-(defpackage :net.spauldo.ai-text.summation
-  (:use :common-lisp)
-  (:export :test))
+  (:export count-atoms))

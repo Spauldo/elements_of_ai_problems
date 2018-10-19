@@ -2,7 +2,7 @@
   
   This chapter is basically a LISP tutorial.  It doesn't teach the entire language, but just the parts you would need to know to complete the exercises in the book.
 
-  I find the archaic style fascinating.  I've written most of my LISP code in Scheme with some Emacs Lisp (where I haven't delved into the dustier parts of the codebase).  I've played around with Clojure (basically the LISP version of Haskell) a bit.  The programming style used in the book is very, very different than what you see used these days.
+  I find the archaic style fascinating.  I've written most of my LISP code in Scheme.  I've written some mostly trivial Emacs Lisp code, but I haven't delved into the dustier parts of the codebase.  I've played around with Clojure (basically the LISP version of Haskell) a bit.  The programming style used in the book is very, very different than what you see used these days.
   
   Strings aren't mentioned at all.  The author uses symbols for text.  Later on, when the author's programs need to perform I/O to the user, it spits out lists of symbols for its output and reads lists of symbols as its input.  Example:
   
@@ -114,3 +114,15 @@
    Define a function (EQUALELTS LST) which returns T if and only if all the top-level elements of LST are EQUAL to each other.
 
    [[equalelts.lisp][Solution]]
+
+** Question 16
+
+   The list ((A B) (C D) (E F)) represents a "quasi-balanced" tree in the sense that:
+   - All top-level sublists have the same length
+   - All top-level sublists have the same depth
+   - Each sublist is also quasi-balanced
+
+   Write a function (QUASI-BALANCEDP LST) which returns T if and only if LST represents a quasi-balanced tree.  You may se the function EQUALELTS of the previous problem.
+
+   [[quasi-balancedp.lisp][Solution]]
+
