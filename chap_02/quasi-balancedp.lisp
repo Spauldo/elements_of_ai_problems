@@ -2,7 +2,19 @@
 ;;;
 ;;; Copyright (C) 2018 Jeff Spaulding <sarnet@gmail.com>
 ;;;
+;;; Lessons learned:
 ;;;
+;;; LIST-LENGTH is defined in :COMMON-LISP, apparently.  Good to know.
+;;;
+;;; This one was actually a bit tricky at first.  As usual, I was overthinking
+;;; it.  Once I decided to just attack each requirement separately, the solution
+;;; basically write itself.
+;;;
+;;; This is rather inefficient, however, as it needs to traverse each list more
+;;; than once, and does not exit immediately upon finding an unbalanced list.
+;;;
+;;; Perhaps combining LIST-LEN and LIST-DEPTH and returning multiple values
+;;; would be a good way to go.
 ;;;
 ;;; This is the ISC License.
 ;;;
@@ -43,11 +55,13 @@
 	 (error "Not NIL, an integer, or a list: ~a" lst))))
 
 (defun list-depth (lst)
+  "Return the nesting depth of LST."
   (if (atom lst)
       0
       (1+ (max-int (mapcar #'list-depth lst)))))
 
 (defun quasi-balancedp (lst)
+  "Return T if LST is quasi-balanced; otherwise, return NIL."
   (and (if (atom lst) ; Test for equal length
 	   T
 	   (equalelts (mapcar #'list-len lst)))
