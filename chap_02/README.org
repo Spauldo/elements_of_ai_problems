@@ -126,3 +126,61 @@
 
    [[quasi-balancedp.lisp][Solution]]
 
+** Question 17
+
+   A function may be recursive even though it does not contain a direct call to itself.  Consider the tree structure of the list:
+
+   #+BEGIN_SRC lisp
+
+((3 (2 5)) (7 (3 1)))
+ 
+   #+END_SRC
+   
+   Suppose we want to compute a value at the root which is the /maximum/ value for its two children, where each of those values is the /minimum/ of its two children's, etc., alternating maximization and minimization at each level of the tree.  Write definitions for two functions TREEMAX and TREEMIN that call each other to come up with the desired value.  Your function should be able to handle binary trees of any depth.  Note that the correct value for the example illustrated is 3.  Test your function on the example above and on the following two:
+
+   #+BEGIN_SRC lisp
+
+(((1 2) (3 4)) ((5 (6 7)) 8))
+(1 (8 (2 (7 (3 (6 (4 5)))))))
+   
+   #+END_SRC
+   
+** Question 18
+
+   Using the function MAKEPOST (described on page 38 of the textbook) as an example, write a function MAKEOPPOSITES which replaces some common words by their opposites.
+
+** Question 19
+
+   Write and debug a LISP function "NEXT" which finds the next element in a sequence.  The sequence is assumed to be a list of FIXNUMs.  NEXT should perform correctly on arithmetic and geometric progressions, and it should give up gracefully on others.  For example:
+
+   #+BEGIN_SRC lisp
+
+(NEXT '(2 4 6 8)) -> 10
+(NEXT '(4 -12 36 -108)) -> 324
+(NEXT '(3 1 4 1)) -> UNKNOWN
+   
+   #+END_SRC
+   
+   Show the results your function gives on these examples and on five other diverse examples of your own fabrication.
+
+** Question 21
+
+   Suppose that an arithmetic expression is any functional form using only PLUS and TIMES as functions, and using only constant numbers, variables (literal atoms (which is what this book calls symbols)), and (nested) arithmetic expressions as arguments.  An example is the following:
+
+   #+BEGIN_SRC lisp
+
+(PLUS X 3 5 (TIMES (TIMES X Y Z) 0))
+   
+   #+END_SRC
+   
+   Write a function SIMPLIFY which takes an arithmetic expression and returns a new one in which the following improvements are made, if the are possible:
+
+   - Any subexpression consisting of the function TIMES followed by a list of arguments, one of which is 0, is replaced by 0
+   - Any occurrence of 1 as an argument to TIMES is eliminated, and then, if possible the occurrence of TIMES is eliminated, leaving only the other factor at that level
+   - Any occurrence of 0 as an argument to PLUS is eliminated, and if only one argument remains, the occurrence of PLUS is eliminated.  If SIMPLIFY were run on the arithmetic expression above, it should give the expression:
+
+     #+BEGIN_SRC lisp
+
+(PLUS X 3 5)
+     
+     #+END_SRC
