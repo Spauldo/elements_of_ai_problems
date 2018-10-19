@@ -122,7 +122,7 @@
    - All top-level sublists have the same depth
    - Each sublist is also quasi-balanced
 
-   Write a function (QUASI-BALANCEDP LST) which returns T if and only if LST represents a quasi-balanced tree.  You may se the function EQUALELTS of the previous problem.
+   Write a function (QUASI-BALANCEDP LST) which returns T if and only if LST represents a quasi-balanced tree.  You may use the function EQUALELTS of the previous problem.
 
    [[quasi-balancedp.lisp][Solution]]
 

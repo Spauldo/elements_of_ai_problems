@@ -20,10 +20,46 @@
 
 (in-package :net.spauldo.ai-text.quasi-balancedp)
 
+(defun list-len (lst)
+  "Get the length of the list LST.  Atoms (and '()) are length 0."
+  (if (atom lst)
+      0
+      (+ 1 (list-len (cdr lst)))))
+
+(defun max-int (lst)
+  "Return the maximum positive integer from list LST."
+  (cond ((not lst)
+	 0)
+	((integerp lst)
+	 lst)
+	((listp lst)
+	 (if (integerp (car lst))
+	     (let ((cdrval (max-int (cdr lst))))
+	       (if (> (car lst) cdrval)
+		   (car lst)
+		   cdrval))
+	     (error "Not an integer: ~a" (car lst))))
+	(T
+	 (error "Not NIL, an integer, or a list: ~a" lst))))
+
+(defun list-depth (lst)
+  (if (atom lst)
+      0
+      (1+ (max-int (mapcar #'list-depth lst)))))
+
 (defun quasi-balancedp (lst)
-  (cond )
-  (listp lst))
+  (and (if (atom lst) ; Test for equal length
+	   T
+	   (equalelts (mapcar #'list-len lst)))
+       (if (atom lst) ; Test for equal depth
+	   T
+	   (equalelts (mapcar #'list-depth lst)))
+       (if (atom lst) ; Test that all sublists are quasi-balanced
+	   T
+	   (equalelts (mapcar #'quasi-balancedp (cons T lst))))))
 
 (defun test ()
-  (and (quasi-balancedp '((A B) (C D) (E F)))
+  (and (quasi-balancedp 'A)
+       (quasi-balancedp '((A B) (C D) (E F)))
+       (quasi-balancedp '(((A B) (C D)) ((E F) (G H))))
        (not (quasi-balancedp '((A (B C)) (D E) (F G))))))
