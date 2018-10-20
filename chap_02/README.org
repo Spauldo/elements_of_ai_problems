@@ -144,10 +144,14 @@
 (1 (8 (2 (7 (3 (6 (4 5)))))))
    
    #+END_SRC
-   
+  
+   [[treeutils.lisp][Solution]]
+ 
 ** Question 18
 
    Using the function MAKEPAST (described on page 38 of the textbook) as an example, write a function MAKEOPPOSITES which replaces some common words by their opposites.
+
+   [[makeopposites.lisp][Solution]]
 
 ** Question 19
 
