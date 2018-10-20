@@ -49,3 +49,7 @@
 (defpackage :net.spauldo.ai-text.summation
   (:use :common-lisp)
   (:export :test))
+
+(defpackage :net.spauldo.ai-text.treeutils
+  (:use :common-lisp)
+  (:export :test))

@@ -44,4 +44,6 @@
 		      :depends-on ("package"))
 	       (:file "summation"
 		      :depends-on ("package"))
+	       (:file "treeutils"
+		      :depends-on ("package"))
 	       (:file "package")))
