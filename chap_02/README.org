@@ -147,7 +147,7 @@
    
 ** Question 18
 
-   Using the function MAKEPOST (described on page 38 of the textbook) as an example, write a function MAKEOPPOSITES which replaces some common words by their opposites.
+   Using the function MAKEPAST (described on page 38 of the textbook) as an example, write a function MAKEOPPOSITES which replaces some common words by their opposites.
 
 ** Question 19
 

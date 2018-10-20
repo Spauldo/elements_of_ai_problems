@@ -53,3 +53,7 @@
 (defpackage :net.spauldo.ai-text.treeutils
   (:use :common-lisp)
   (:export :test))
+
+(defpackage :net.spauldo.ai-text.makeopposites
+  (:use :common-lisp)
+  (:export :test))
