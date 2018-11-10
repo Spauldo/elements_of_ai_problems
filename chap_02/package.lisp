@@ -34,6 +34,10 @@
   (:use :common-lisp)
   (:export :test))
 
+(defpackage :net.spauldo.ai-text.find-next
+  (:use :common-lisp)
+  (:export :test))
+
 (defpackage :net.spauldo.ai-text.palindrome
   (:use :common-lisp)
   (:export :test))

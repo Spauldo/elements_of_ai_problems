@@ -36,6 +36,8 @@
 		      :depends-on ("package"))
 	       (:file "exify"
 		      :depends-on ("package"))
+	       (:file "find-next"
+		      :depends-on ("package"))
 	       (:file "makeopposites"
 		      :depends-on ("package"))
 	       (:file "palindrome"
