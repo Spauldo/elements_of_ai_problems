@@ -166,6 +166,8 @@
    #+END_SRC
    
    Show the results your function gives on these examples and on five other diverse examples of your own fabrication.
+   
+   [[find-next.lisp][Solution]]
 
 ** Question 21
 
